@@ -1,0 +1,84 @@
+{
+	"folders": {},
+	"connections": {
+		"oracle_thin-17db2ff9cec-75e2f50deb958595": {
+			"provider": "oracle",
+			"driver": "oracle_thin",
+			"name": "ORCLCDB.localdomain",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "1521",
+				"database": "ORCLCDB.localdomain",
+				"url": "jdbc:oracle:thin:@//localhost:1521/ORCLCDB.localdomain",
+				"type": "dev",
+				"provider-properties": {
+					"show-only-one-schema@": "false",
+					"@dbeaver-check-schema-content@": "false",
+					"@dbeaver-always-show-dba@": "false",
+					"@dbeaver-always-use-dba-views@": "false",
+					"@dbeaver-meta-use-sys-schema@": "false",
+					"@dbeaver-meta-use-simple-constraints@": "false",
+					"@dbeaver-use-rule-hint@": "false",
+					"@dbeaver-use-meta-optimizer@": "false",
+					"@dbeaver-meta-use-alternative-table-query@": "false",
+					"oracle.meta-search-in-synonyms": "false",
+					"@dbeaver-connection-type@": "BASIC",
+					"@dbeaver-sid-service@": "SERVICE"
+				},
+				"auth-model": "oracle_native"
+			}
+		},
+		"mysql8-17e8b4d79cb-e4f0eab65b03e6f": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "db_exampleName",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "db_exampleName",
+				"url": "jdbc:mysql://localhost:3306/db_exampleName",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {
+					"mysql_ssl": {
+						"type": "CONFIG",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"ssl.public.key.retrieve": "true",
+							"ssl.verify.server": "false",
+							"ssl.method": "CERTIFICATES",
+							"ssl.require": "false"
+						}
+					}
+				}
+			}
+		}
+	},
+	"virtual-models": {
+		"oracle_thin-17db2ff9cec-75e2f50deb958595": {
+			"DUMMY": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201101003\"><entities><data-source id=\"oracle_thin-17db2ff9cec-75e2f50deb958595\"><entity id=\"1\" name=\"AUTOR\" fq-name=\"DUMMY.AUTOR\" order=\"0\" x=\"189\" y=\"20\"><path name=\"DUMMY\"/></entity><entity id=\"2\" name=\"EDITORIAL\" fq-name=\"DUMMY.EDITORIAL\" order=\"1\" x=\"386\" y=\"319\"><path name=\"DUMMY\"/></entity><entity id=\"3\" name=\"LIBRO\" fq-name=\"DUMMY.LIBRO\" order=\"2\" x=\"384\" y=\"115\"><path name=\"DUMMY\"/></entity><entity id=\"4\" name=\"LIBRO_AUTOR\" fq-name=\"DUMMY.LIBRO_AUTOR\" order=\"3\" x=\"20\" y=\"115\"><path name=\"DUMMY\"/></entity><entity id=\"5\" name=\"PUBLICACIONES\" fq-name=\"DUMMY.PUBLICACIONES\" order=\"4\" x=\"161\" y=\"295\"><path name=\"DUMMY\"/></entity><entity id=\"6\" name=\"TEMA\" fq-name=\"DUMMY.TEMA\" order=\"5\" x=\"597\" y=\"134\"><path name=\"DUMMY\"/></entity></data-source></entities><relations><relation name=\"FK_LIBRO2\" fq-name=\"DUMMY.LIBRO.FK_LIBRO2\" type=\"fk\" pk-ref=\"1\" fk-ref=\"3\"/><relation name=\"FK_LIBRO_AUTOR2\" fq-name=\"DUMMY.LIBRO_AUTOR.FK_LIBRO_AUTOR2\" type=\"fk\" pk-ref=\"1\" fk-ref=\"4\"/><relation name=\"FK_PUBLICACIONES\" fq-name=\"DUMMY.PUBLICACIONES.FK_PUBLICACIONES\" type=\"fk\" pk-ref=\"2\" fk-ref=\"5\"/><relation name=\"FK_AUTOR\" fq-name=\"DUMMY.AUTOR.FK_AUTOR\" type=\"fk\" pk-ref=\"3\" fk-ref=\"1\"/><relation name=\"FK_LIBRO_AUTOR\" fq-name=\"DUMMY.LIBRO_AUTOR.FK_LIBRO_AUTOR\" type=\"fk\" pk-ref=\"3\" fk-ref=\"4\"/><relation name=\"FK_PUBLICACIONES2\" fq-name=\"DUMMY.PUBLICACIONES.FK_PUBLICACIONES2\" type=\"fk\" pk-ref=\"3\" fk-ref=\"5\"/><relation name=\"FK_LIBRO\" fq-name=\"DUMMY.LIBRO.FK_LIBRO\" type=\"fk\" pk-ref=\"6\" fk-ref=\"3\"/><relation name=\"FK_TEMA\" fq-name=\"DUMMY.TEMA.FK_TEMA\" type=\"fk\" pk-ref=\"6\" fk-ref=\"6\"><bend type=\"rel\" x=\"812\" y=\"238\"/><bend type=\"rel\" x=\"683\" y=\"264\"/></relation></relations></diagram>"
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
